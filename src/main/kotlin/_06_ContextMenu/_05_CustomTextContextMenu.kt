@@ -1,3 +1,4 @@
+
 import androidx.compose.foundation.ContextMenuDataProvider
 import androidx.compose.foundation.ContextMenuItem
 import androidx.compose.foundation.ContextMenuState
@@ -8,12 +9,7 @@ import androidx.compose.foundation.text.TextContextMenu
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.awt.ComposePanel
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.AnnotatedString
@@ -23,6 +19,10 @@ import java.nio.charset.Charset
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 
+/**
+ * Custom text menu
+ * You can override text menu for all texts and text fields in your application, overriding TextContextMenu:
+ */
 fun main() = SwingUtilities.invokeLater {
     val panel = ComposePanel()
     panel.setContent {

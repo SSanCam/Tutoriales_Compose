@@ -1,3 +1,5 @@
+package _02_ImageAndIconManipulation
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.width
@@ -29,9 +31,9 @@ import java.net.URL
 fun main() = singleWindowApplication {
     val density = LocalDensity.current
     Column {
-        if (File("src\\main\\resources\\images\\sample.png").isFile){
+        if (File("src\\main\\resources\\tutorial2\\sample.png").isFile){
             AsyncImage(
-                load = { loadImageBitmap(File("src\\main\\resources\\images\\sample.png")) },
+                load = { loadImageBitmap(File("src\\main\\resources\\tutorial2\\sample.png")) },
                 painterFor = { remember { BitmapPainter(it) } },
                 contentDescription = "Sample",
                 modifier = Modifier.width(200.dp)
@@ -44,7 +46,7 @@ fun main() = singleWindowApplication {
                 modifier = Modifier.width(200.dp)
             )
             AsyncImage(
-                load = { loadXmlImageVector(File("src\\main\\resources\\images\\compose-logo.xml"), density) },
+                load = { loadXmlImageVector(File("src\\main\\resources\\tutorial2\\compose-logo.xml"), density) },
                 painterFor = { rememberVectorPainter(it) },
                 contentDescription = "Compose logo",
                 contentScale = ContentScale.FillWidth,

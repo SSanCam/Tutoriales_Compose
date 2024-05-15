@@ -1,9 +1,10 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
-    kotlin("jvm")
-    id("org.jetbrains.compose")
+    kotlin("jvm") version "1.8.0" // Reemplaza con la versión más reciente de Kotlin
+    id("org.jetbrains.compose") version "1.5.0" // Reemplaza con la versión más reciente de Compose
 }
+
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
